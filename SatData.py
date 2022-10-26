@@ -24,12 +24,12 @@ class SatData:
 
         with open("output.csv", "w") as outfile:
             headers = ['DBN', 'School Name', 'Number of Test Takers', 'Critical Reading Mean', 'Mathematics Mean',
-                       'Writing Mean']
+                       'Writing Mean', ]
 
             for elements in headers:
                 elements.strip()
-                outfile.write(*elements, sep=',')
-               # outfile.write(',')
+                outfile.write(elements)
+                outfile.write(',')
             outfile.write('\n')
 
             output = []
@@ -41,5 +41,4 @@ class SatData:
                         output.append(data)
                 outfile.write(str(output))
             outfile.write('\n')
-
 

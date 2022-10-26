@@ -28,9 +28,8 @@ class SatData:
 
             for elements in headers:
                 elements.strip()
-                outfile.write(elements)
-                #outfile.write(',')
-                outfile.write(elements.join(","))
+                outfile.write(",".join(headers))
+           #     outfile.write(',')
             outfile.write('\n')
 
             output = []
@@ -42,5 +41,4 @@ class SatData:
                         output.append(data)
                 outfile.write(str(output))
             outfile.write('\n')
-
 

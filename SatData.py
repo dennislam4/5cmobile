@@ -30,7 +30,7 @@ class SatData:
                 elements.strip()
                 outfile.write(elements)
                 outfile.write(',')
-                outfile.write(elements.rstrip(","))
+                outfile.write(",".join(elements))
             outfile.write('\n')
 
             output = []
